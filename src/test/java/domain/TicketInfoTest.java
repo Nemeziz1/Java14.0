@@ -43,4 +43,6 @@ class TicketInfoTest {
         TicketInfo[] actual = manager.findAll("LCA", "DME", comparator);
         assertArrayEquals(expected, actual);
     }
+
+
 }
