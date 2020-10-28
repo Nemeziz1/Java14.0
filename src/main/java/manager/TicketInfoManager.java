@@ -3,6 +3,9 @@ package manager;
 import domain.TicketInfo;
 import repository.TicketInfoRepository;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class TicketInfoManager {
     private TicketInfoRepository repository;
 
@@ -21,12 +24,24 @@ public class TicketInfoManager {
 
     private TicketInfo[] trips = new TicketInfo[0];
 
-    public TicketInfo[] findAll(String from, String to) {
+    /*public TicketInfo[] findAll(String from, String to) {
 
         TicketInfo[] tmp = repository.findAll();
         for (TicketInfo trip : tmp) {
             if (trip.getFrom() == from && trip.getTo() == to) {
                 save(trip);
+            }
+        }
+        return trips;
+    }*/
+
+    public TicketInfo[] findAll(String from, String to, Comparator<TicketInfo> comparator) {
+
+        TicketInfo[] tmp = repository.findAll();
+        for (TicketInfo trip : tmp) {
+            if (trip.getFrom() == from && trip.getTo() == to) {
+                save(trip);
+                Arrays.sort(trips, comparator);
             }
         }
         return trips;
