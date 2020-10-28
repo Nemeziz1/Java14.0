@@ -31,7 +31,6 @@ class TicketInfoTest {
     public void sortSuitableTrips() {
         TicketInfo[] expected = new TicketInfo[]{four, two};
         TicketInfo[] actual = manager.findAll("SVO", "TSE");
-        Arrays.sort(actual);
         assertArrayEquals(expected, actual);
     }
 
@@ -39,7 +38,6 @@ class TicketInfoTest {
     public void sortOneSuitableTrip() {
         TicketInfo[] expected = new TicketInfo[]{five};
         TicketInfo[] actual = manager.findAll("LCA", "DME");
-        Arrays.sort(actual); //можно не применять
         assertArrayEquals(expected, actual);
     }
 
@@ -47,7 +45,6 @@ class TicketInfoTest {
     public void noTrips() {
         TicketInfo[] expected = new TicketInfo[]{};
         TicketInfo[] actual = manager.findAll("SVO", "LCA");
-        Arrays.sort(actual);
         assertArrayEquals(expected, actual);
     }
 }
