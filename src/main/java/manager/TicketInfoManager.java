@@ -33,11 +33,7 @@ public class TicketInfoManager {
         for (TicketInfo trip : tmp) {
             if (trip.getFrom() == from && trip.getTo() == to) {
                 save(trip);
-
                 Arrays.sort(trips, comparator);
-
-                Arrays.sort(trips);
-
             }
         }
         return trips;
