@@ -4,7 +4,10 @@ import domain.TicketInfo;
 import repository.TicketInfoRepository;
 
 import java.util.Arrays;
+comparator
 import java.util.Comparator;
+
+master
 
 public class TicketInfoManager {
     private TicketInfoRepository repository;
@@ -30,7 +33,11 @@ public class TicketInfoManager {
         for (TicketInfo trip : tmp) {
             if (trip.getFrom() == from && trip.getTo() == to) {
                 save(trip);
+comparator
                 Arrays.sort(trips, comparator);
+
+                Arrays.sort(trips);
+master
             }
         }
         return trips;
