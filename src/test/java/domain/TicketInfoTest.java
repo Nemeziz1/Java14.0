@@ -12,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class TicketInfoTest {
     TicketInfoRepository repository = new TicketInfoRepository();
     TicketInfoManager manager = new TicketInfoManager(repository);
-    TicketInfo one = new TicketInfo(1, 8000, null, null, 180);
+    TicketInfo one = new TicketInfo(1, 8000, "DME", "GZP", 180);
     TicketInfo two = new TicketInfo(2, 15000, "SVO", "TSE", 180);
-    TicketInfo three = new TicketInfo(3, 7000, "LCA", null, 200);
+    TicketInfo three = new TicketInfo(3, 7000, "LCA", "GZP", 200);
     TicketInfo four = new TicketInfo(4, 5000, "SVO", "TSE", 180);
     TicketInfo five = new TicketInfo(5, 10000, "LCA", "DME", 220);
 

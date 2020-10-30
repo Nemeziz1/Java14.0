@@ -27,11 +27,11 @@ public class TicketInfoManager {
 
         TicketInfo[] tmp = repository.findAll();
         for (TicketInfo trip : tmp) {
-            if (trip.getFrom() == from && trip.getTo() == to) {
+            if (trip.getFrom().equals(from) && trip.getTo().equals(to)) {
                 save(trip);
-                Arrays.sort(trips);
             }
         }
+        Arrays.sort(trips);
         return trips;
     }
 }
