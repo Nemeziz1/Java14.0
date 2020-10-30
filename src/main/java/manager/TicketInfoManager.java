@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 
-
 public class TicketInfoManager {
     private TicketInfoRepository repository;
 

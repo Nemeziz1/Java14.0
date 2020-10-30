@@ -44,4 +44,17 @@ class TicketInfoTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void sortTheOneTrip() {
+        TicketInfo[] expected = new TicketInfo[]{one};
+        TicketInfo[] actual = manager.findAllComparator("DME", "LCA", comparator);
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void sortNoTrips() {
+        TicketInfo[] expected = new TicketInfo[]{};
+        TicketInfo[] actual = manager.findAllComparator("TSE", "DME", comparator);
+        assertArrayEquals(expected, actual);
+    }
 }
