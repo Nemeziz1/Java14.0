@@ -15,7 +15,7 @@ class TicketInfoTest {
     TicketInfoManager manager = new TicketInfoManager(repository);
     TicketByTimeAscComparator comparator = new TicketByTimeAscComparator();
 
-    TicketInfo one = new TicketInfo(1, 8000, null, null, 180);
+    TicketInfo one = new TicketInfo(1, 8000, "DME", "LCA", 180);
     TicketInfo two = new TicketInfo(2, 15000, "SVO", "TSE", 180);
     TicketInfo three = new TicketInfo(3, 7000, "LCA", "DME", 220);
     TicketInfo four = new TicketInfo(4, 5000, "SVO", "TSE", 200);
