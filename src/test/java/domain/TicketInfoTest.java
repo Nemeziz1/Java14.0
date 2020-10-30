@@ -31,16 +31,16 @@ class TicketInfoTest {
     }
 
     @Test
-    public void sortSuitableTrips() {
+    public void sortSuitableTripsComparator() {
         TicketInfo[] expected = new TicketInfo[]{two, four};
-        TicketInfo[] actual = manager.findAll("SVO", "TSE", comparator);
+        TicketInfo[] actual = manager.findAllComparator("SVO", "TSE", comparator);
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void sortOneSuitableTrip() {
+    public void sortOneSuitableTripComparator() {
         TicketInfo[] expected = new TicketInfo[]{three, five};
-        TicketInfo[] actual = manager.findAll("LCA", "DME", comparator);
+        TicketInfo[] actual = manager.findAllComparator("LCA", "DME", comparator);
         assertArrayEquals(expected, actual);
     }
 

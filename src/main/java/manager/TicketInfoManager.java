@@ -27,15 +27,14 @@ public class TicketInfoManager {
 
     private TicketInfo[] trips = new TicketInfo[0];
 
-    public TicketInfo[] findAll(String from, String to, Comparator<TicketInfo> comparator) {
-
+    public TicketInfo[] findAllComparator(String from, String to, Comparator<TicketInfo> comparator) {
         TicketInfo[] tmp = repository.findAll();
         for (TicketInfo trip : tmp) {
-            if (trip.getFrom() == from && trip.getTo() == to) {
+            if (trip.getFrom().equals(from) && trip.getTo().equals(to)) {
                 save(trip);
-                Arrays.sort(trips, comparator);
             }
         }
+        Arrays.sort(trips, comparator);
         return trips;
     }
 }
