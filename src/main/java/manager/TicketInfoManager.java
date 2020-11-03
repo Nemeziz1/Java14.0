@@ -24,7 +24,6 @@ public class TicketInfoManager {
         for (TicketInfo trip :  repository.findAll()) {
             if (trip.getFrom().equals(from) && trip.getTo().equals(to)) {
                 TicketInfo[] tmp = new TicketInfo[trips.length + 1];
-                repository.add(trip);
                 System.arraycopy(trips, 0, tmp, 0, trips.length);
                 tmp[tmp.length - 1] = trip;
                 trips = tmp;
